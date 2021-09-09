@@ -1108,6 +1108,8 @@ class PlayState extends MusicBeatState
 			case 'pico':
 				camPos.x += 600;
 				dad.y += 300;
+				oppColor = 0xFF000000;
+				oppBGColor = 0xFFff8800;
 			case 'parents-christmas':
 				dad.x -= 500;
 			case 'parents-christmas2':
@@ -1284,11 +1286,21 @@ class PlayState extends MusicBeatState
 				songName.cameras = [camHUD];
 			}
 
-		healthBarBG = new FlxSprite(0, FlxG.height * 0.9).loadGraphic(Paths.image('healthBar'));
+		healthBarBGOld = new FlxSprite(0, FlxG.height * 0.9).loadGraphic(Paths.image('healthBar'));
+		if (1=1)
+			healthBarBGOld.y = -1000;
+		healthBarBGOld.screenCenter(X);
+		healthBarBGOld.scrollFactor.set();
+		add(healthBarBGOld);
+
+		healthBarBG = new FlxBar(0, FlxG.height * 0.9, RIGHT_TO_LEFT, Std.int(healthBarBGOld.width), Std.int(healthBarBGOld.height), this,
+			'health', 0, 2);
 		if (FlxG.save.data.downscroll)
 			healthBarBG.y = 50;
 		healthBarBG.screenCenter(X);
 		healthBarBG.scrollFactor.set();
+		healthBarBG.createFilledBar(oppBGColor, bfBGColor);
+		// healthBar
 		add(healthBarBG);
 
 		healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8), this,
