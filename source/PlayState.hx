@@ -146,7 +146,7 @@ class PlayState extends MusicBeatState
 	private var sectionHasBFNotes:Bool = false;
 	private var sectionHaveNotes:Array<Array<Bool>> = [];
 
-	private var healthBarBG:FlxSprite;
+	private var healthBarBG:FlxBar;
 	private var healthBar:FlxBar;
 	private var songPositionBar:Float = 0;
 
