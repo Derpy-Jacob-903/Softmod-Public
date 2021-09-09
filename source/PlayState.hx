@@ -82,7 +82,7 @@ class PlayState extends MusicBeatState
 	public static var goods:Int = 0;
 	public static var sicks:Int = 0;
 
-	public static var songPosBG:FlxSprite;
+	public static var songPosBG:FlxBar; // public static var songPosBG:FlxSprite;
 	public static var songPosBar:FlxBar;
 
 	public static var rep:Replay;
@@ -150,7 +150,9 @@ class PlayState extends MusicBeatState
 	private var songPositionBar:Float = 0;
 
 	private var oppColor:FlxColor = 0xFFFF0000;
-	private var bfColor:FlxColor = 0xFF6C97ED;
+	private var bfColor:FlxColor = 0xFF000000;
+	private var oppBGColor:FlxColor = 0xFF000000;
+	private var bfBGColor:FlxColor = 0xFFff0000;
 	
 	private var generatedMusic:Bool = false;
 	private var startingSong:Bool = false;
