@@ -82,6 +82,7 @@ class PlayState extends MusicBeatState
 	public static var goods:Int = 0;
 	public static var sicks:Int = 0;
 
+	public static var songPosBGOld:FlxSprite;
 	public static var songPosBG:FlxBar; // public static var songPosBG:FlxSprite;
 	public static var songPosBar:FlxBar;
 
