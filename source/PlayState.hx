@@ -1287,14 +1287,13 @@ class PlayState extends MusicBeatState
 				songName.cameras = [camHUD];
 			}
 
-		healthBarBGOld = new FlxSprite(0, FlxG.height * 0.9).loadGraphic(Paths.image('healthBar'));
-		if (1=1)
-			healthBarBGOld.y = -1000;
-		healthBarBGOld.screenCenter(X);
-		healthBarBGOld.scrollFactor.set();
-		add(healthBarBGOld);
+		//healthBarBGOld = new FlxSprite(0, FlxG.height * 0.9).loadGraphic(Paths.image('healthBar'));
+		//healthBarBGOld.y = -1000;
+		//healthBarBGOld.screenCenter(X);
+		//healthBarBGOld.scrollFactor.set();
+		//add(healthBarBGOld);
 
-		healthBarBG = new FlxBar(0, FlxG.height * 0.9, RIGHT_TO_LEFT, Std.int(healthBarBGOld.width), Std.int(healthBarBGOld.height), this,
+		healthBarBG = new FlxBar(0, FlxG.height * 0.9, RIGHT_TO_LEFT, Std.int(healthBarBGOld.width - 0), Std.int(healthBarBGOld.height - 0), this,
 			'health', 0, 2);
 		if (FlxG.save.data.downscroll)
 			healthBarBG.y = 50;
