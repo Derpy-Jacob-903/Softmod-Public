@@ -2815,6 +2815,10 @@ class PlayState extends MusicBeatState
 						if(dad.curCharacter == "ogbf" && health > 0.04){
 							health -= 0.04;
 						}
+						
+						if(dad.curCharacter == "pico" && health > 0.04){
+							health -= 0.02;
+						}
 
 					}
 
