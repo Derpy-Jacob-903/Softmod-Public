@@ -431,9 +431,51 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 				flipX = true;
+				
+			case 'bf':
+				var tex = Paths.getSparrowAtlas('characters/softie', 'shared');
+				frames = tex;
 
-			case 'ogbf':
-				var tex = Paths.getSparrowAtlas('characters/ogbf', 'shared');
+				trace(tex.frames.length);
+
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('hey', 'BF HEY', 24, false);
+
+				animation.addByPrefix('firstDeath', "BF dies", 24, false);
+				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+
+				animation.addByPrefix('scared', 'BF idle shaking', 24);
+
+				addOffset('idle', -5);
+				addOffset("singUP", 0, 10);
+				addOffset("singRIGHT", -43, -7);
+				addOffset("singLEFT", 19, -9);
+				addOffset("singDOWN", 1, -53);
+				addOffset("singUPmiss", -12, 9);
+				addOffset("singRIGHTmiss", -53, -8);
+				addOffset("singLEFTmiss", 20, -8);
+				addOffset("singDOWNmiss", 0, -53);
+				addOffset("hey", 3, -2);
+				addOffset('firstDeath', 37, 5);
+				addOffset('deathLoop', 37, -4);
+				addOffset('deathConfirm', 37, 41);
+				addOffset('scared', -8, -5);
+
+				playAnim('idle');
+
+				flipX = true;
+
+			case 'bfold':
+				var tex = Paths.getSparrowAtlas('characters/BOYFRIEND', 'shared');
 				frames = tex;
 
 				trace(tex.frames.length);
