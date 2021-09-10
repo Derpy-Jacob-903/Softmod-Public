@@ -1111,6 +1111,11 @@ class PlayState extends MusicBeatState
 				dad.y += 300;
 				oppColor = 0xFF000000;
 				oppBGColor = 0xFFff8800;
+			case 'bfold':
+				camPos.x += 600;
+				dad.y += 300;
+				oppColor = 0xFF000000;
+				oppBGColor = 0xFFff0000;
 			case 'parents-christmas':
 				dad.x -= 500;
 			case 'parents-christmas2':
