@@ -39,12 +39,15 @@ class HealthIcon extends FlxSprite
 		animation.add('dad2', [12, 13], 0, false, isPlayer);
 		animation.add('dad3', [12, 13], 0, false, isPlayer);
 		animation.add('senpai', [22, 22], 0, false, isPlayer);
-		animation.add('ogbf', [22, 22], 0, false, isPlayer);
+		animation.add('ogbf', [24, 24], 0, false, isPlayer);
 		animation.add('senpai-angry', [22, 22], 0, false, isPlayer);
 		animation.add('spirit', [23, 23], 0, false, isPlayer);
 		animation.add('bf-old', [14, 15], 0, false, isPlayer);
 		animation.add('gf', [16], 0, false, isPlayer);
+		animation.add('oggf', [16], 0, false, isPlayer);
 		animation.add('gf-christmas', [16], 0, false, isPlayer);
+		animation.add('oggf-christmas', [16], 0, false, isPlayer);
+		animation.add('oggf-car', [16], 0, false, isPlayer);
 		animation.add('gf-pixel', [16], 0, false, isPlayer);
 		animation.add('parents-christmas', [17, 18], 0, false, isPlayer);
 		animation.add('parents-christmas2', [17, 18], 0, false, isPlayer);
